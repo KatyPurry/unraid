@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1630222639</DateInstalled>
+  <DateInstalled>1630222960</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Web GUI for youtube-dl (using the yt-dlp fork) with playlist support. Allows you to download videos from YouTube and dozens of other sites (https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md).</Description>
@@ -54,6 +54,11 @@
       <Name>100</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="WebUI" Target="8081" Default="" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="true" Mask="false">8081</Config>
@@ -61,4 +66,5 @@
   <Config Name="Outpout Template" Target="OUTPUT_TEMPLATE" Default="%(title)s.%(ext)s" Mode="" Description="You can check all tags here: https://github.com/ytdl-org/youtube-dl/blob/master/README.md#output-template" Type="Variable" Display="always" Required="false" Mask="false">%(channel)s/%(title)s.%(ext)s</Config>
   <Config Name="PUID" Target="99" Default="99" Mode="" Description="Container Variable: 99" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="100" Default="100" Mode="" Description="Container Variable: 100" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="000" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="false" Mask="false">000</Config>
 </Container>
